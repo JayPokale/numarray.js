@@ -1,28 +1,92 @@
+/*
+  Introduction to class:
+
+  Fields {
+    Private {
+      #buffer;
+      #size;
+      #arr;
+    },
+    Public {
+      type = Uint8
+      length
+    }
+  },
+  Methods {
+    Public {
+      array    -> Return typed array (Pointer to original memory location)
+      toArray  -> Return normal array (Copy of original array)
+      clone    -> Return typed array (Copy of original array)
+      set      -> Set item at given index
+      
+      // Below methods are doing same as original array methods but code written from scratch
+      at
+      slice
+      push
+      pop
+      unshift
+      shift
+      concat
+      sort
+
+      // Code reused from original method
+      reverse
+      fill
+      indexOf
+      lastIndexOf
+      includes
+      findIndex
+      findLast
+      findLastIndex
+      every
+      some
+      filter
+      map
+      forEach
+      reduce
+      reduceRight
+      join
+    },
+    Private {
+      #grow    -> Double the size of buffer
+      #shrink  -> Half the size of buffer
+      #sort    -> Sort in private
+    }
+  }
+*/
+
 module.exports = class Uint8 {
+  // Private fields
   #buffer;
   #size;
   #arr;
 
   constructor(length = 10) {
     if (length < 0) {
-      console.error("Array length is not valid");
       throw new Error("Array length is not valid");
     }
+
+    // Private fields
     this.#size = Math.max(10, length);
     this.#buffer = new ArrayBuffer(this.#size);
     this.#arr = new Uint8Array(this.#buffer);
+
+    // Public fields
     this.type = "Uint8";
     this.length = length;
   }
 
-  at(index) {
-    if (index < 0) index += this.length;
-    if (index < 0 || index >= this._length) return undefined;
-    return this.#arr[index];
+  // Newly introduced methods to array
+  array() {
+    return new Uint8Array(this.#buffer, 0, this.length);
   }
 
-  get(index) {
-    return this.at(index);
+  toArray() {
+    return Array.from(this.array());
+  }
+
+  clone() {
+    return this.#arr.slice(0, this.length);
   }
 
   set(index, value) {
@@ -35,16 +99,11 @@ module.exports = class Uint8 {
     this.#arr[index] = value;
   }
 
-  array() {
-    return new Uint8Array(this.#buffer, 0, this.length);
-  }
-
-  toArray() {
-    return Array.from(this.array());
-  }
-
-  clone() {
-    return this.#arr.slice(0, this.length);
+  // Original array methods (Code written from scratch)
+  at(index) {
+    if (index < 0) index += this.length;
+    if (index < 0 || index >= this._length) return undefined;
+    return this.#arr[index];
   }
 
   slice(start = 0, end = this.length) {
@@ -112,6 +171,7 @@ module.exports = class Uint8 {
     return this.#sort(arr, comparisonFunction);
   }
 
+  // Code reused from original methods
   reverse() {
     var arr = this.array();
     return arr.reverse();
