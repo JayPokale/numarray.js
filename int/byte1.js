@@ -1,7 +1,7 @@
 const IntegerArray = require("../baseArray/integerArray");
 
 class Int8 extends IntegerArray {
-  constructor(length = 10) {
+  constructor(length) {
     super(length, "Int8");
   }
 

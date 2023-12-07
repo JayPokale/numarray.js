@@ -1,7 +1,7 @@
 const IntegerArray = require("../baseArray/integerArray");
 
 class Uint32 extends IntegerArray {
-  constructor(length = 10) {
+  constructor(length) {
     super(length, "Uint32");
   }
 
