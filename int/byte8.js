@@ -1,13 +1,13 @@
 const IntegerArray = require("../baseArray/integerArray");
 
-class Uint8 extends IntegerArray {
+class Int8 extends IntegerArray {
   constructor(length = 10) {
     super(length, "Uint8");
   }
 
   get ArrayType() {
-    return Uint8Array;
+    return Int8Array;
   }
 }
 
-module.exports = Uint8;
+module.exports = Int8;
