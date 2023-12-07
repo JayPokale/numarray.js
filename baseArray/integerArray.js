@@ -52,7 +52,7 @@
       reduceRight
       join
     },
-    
+
     Private {
       #grow       -> Double the size of buffer
       #shrink     -> Half the size of buffer
@@ -109,7 +109,7 @@ class IntegerArray {
     this.#arr[index] = value;
   }
 
-  // Original array methods (Code written from scratch)
+  // Standard array methods (recreated)
   at(index) {
     if (index < 0) index += this.length;
     if (index < 0 || index >= this._length) return undefined;
@@ -181,7 +181,7 @@ class IntegerArray {
     return this.#sort(arr, comparisonFunction);
   }
 
-  // Code reused from original methods
+  // Standard array methods (reused)
   reverse() {
     var arr = this.array();
     return arr.reverse();
@@ -262,6 +262,7 @@ class IntegerArray {
     return arr.join(separator);
   }
 
+  // Private methods
   #grow(size = this.#size * 2) {
     this.#size = size;
     var buffer = new ArrayBuffer(this.#size);
@@ -285,11 +286,13 @@ class IntegerArray {
 
     var minElement = Math.min(...arr);
     var maxElement = Math.max(...arr);
+    var range = maxElement - minElement + 1;
 
-    if (maxElement - minElement > arr.length * Math.log2(arr.length)) {
+    if (this.length + range > this.length * Math.log2(this.length)) {
       return arr.sort((a, b) => a - b);
     }
 
+    // Pigeonhole Sort (Modified Counting Sort)
     var freq;
     if (this.length < 1 << 8) {
       freq = new Uint8Array(maxElement - minElement + 1);
