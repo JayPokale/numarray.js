@@ -294,12 +294,12 @@ class IntegerArray {
 
     // Pigeonhole Sort (Modified Counting Sort)
     var freq;
-    if (this.length < 1 << 8) {
-      freq = new Uint8Array(maxElement - minElement + 1);
-    } else if (this.length < 1 << 16) {
-      freq = new Uint16Array(maxElement - minElement + 1);
+    if (this.length < 0x100) {
+      freq = new Uint8Array(range);
+    } else if (this.length < 0x10000) {
+      freq = new Uint16Array(range);
     } else {
-      freq = new Uint32Array(maxElement - minElement + 1);
+      freq = new Uint32Array(range);
     }
     arr.forEach((x) => ++freq[x - minElement]);
     var index = 0;
