@@ -1,4 +1,4 @@
-const Uint8 = require("./uint/byte8");
+const Uint8 = require("./uint/bit8");
 
 var x = new Uint8(0);
 x.push(9);
