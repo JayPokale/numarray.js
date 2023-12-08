@@ -4,8 +4,11 @@
   "description": "Dynamic Typed Array",
   "main": "main.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "author": "Jay Pokale",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
