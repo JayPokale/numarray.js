@@ -33,6 +33,21 @@ describe("Float32Array", () => {
     expect(float32.at(2)).toBe(1.5);
     expect(float32.at(3)).toBe(2.5);
   });
+
+  test("should sort float32 array with custom function", () => {
+    const float32 = TypedArray("float32");
+    float32.push(2.5);
+    float32.push(0.5);
+    float32.push(1.5);
+    float32.push(1.5);
+
+    float32.sort((a, b) => a - b);
+
+    expect(float32.at(0)).toBe(0.5);
+    expect(float32.at(1)).toBe(1.5);
+    expect(float32.at(2)).toBe(1.5);
+    expect(float32.at(3)).toBe(2.5);
+  });
 });
 
 describe("Float64Array", () => {
@@ -60,6 +75,21 @@ describe("Float64Array", () => {
     float64.push(1.5);
 
     float64.sort();
+
+    expect(float64.at(0)).toBe(0.5);
+    expect(float64.at(1)).toBe(1.5);
+    expect(float64.at(2)).toBe(1.5);
+    expect(float64.at(3)).toBe(2.5);
+  });
+
+  test("should sort float64 array with custom function", () => {
+    const float64 = TypedArray("float64");
+    float64.push(2.5);
+    float64.push(0.5);
+    float64.push(1.5);
+    float64.push(1.5);
+
+    float64.sort((a, b) => a - b);
 
     expect(float64.at(0)).toBe(0.5);
     expect(float64.at(1)).toBe(1.5);

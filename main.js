@@ -31,6 +31,7 @@ var TypedArray = function (type = "int32", length = 0) {
   // BigInt
   if (type === "int64") return new BigInt64(length);
   if (type === "uint64") return new BigUint64(length);
+  throw Error("Enter Valid Type");
 };
 
 module.exports = TypedArray;
