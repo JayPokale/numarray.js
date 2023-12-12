@@ -1087,11 +1087,6 @@
  * @classdesc Represents a custom array implementation with additional methods.
  *
  * Fields:
- * @property {ArrayBuffer} #buffer - Private field for storing array buffer.
- * @property {number} #size - Private field for tracking the size of the array.
- * @property {TypedArray} #arr - Private field for storing the typed array.
- * @property {string} #valueType - Private field for storing the value type.
- * @property {number} #byteLength - Private field for storing the byte length.
  * @property {string} type - Public field for storing the type of the array.
  * @property {number} length - Public field for storing the length of the array.
  *
@@ -1125,13 +1120,18 @@
  * @method reduce() - Applies a function against an accumulator and each element in the array (left-to-right).
  * @method reduceRight() - Applies a function against an accumulator and each element in the array (right-to-left).
  * @method join() - Joins all elements of an array into a string.
- *
- * Private Methods:
- * @method #grow() - Doubles the size of the array buffer.
- * @method #shrink() - Halves the size of the array buffer.
  */
 &nbsp;
 class BaseArray {
+  /**
+   * Callback function type used in various array methods.
+   * @callback ArrayCallback
+   * @param {number | bigint} value - The current element being processed in the array.
+   * @param {number} index - The index of the current element being processed in the array.
+   * @param {Array} array - The array that `value` belongs to.
+   * @returns {any} The result of processing the current element.
+   */
+&nbsp;
   // Private fields
   #buffer;
   #size;
@@ -1398,7 +1398,7 @@ class BaseArray {
   /**
    * Returns the index of the first element that satisfies the provided testing function.
    *
-   * @param {function} callbackFn - A function that tests each element.
+   * @param {ArrayCallback} callbackFn - A function that tests each element.
    * @param {any} [thisArg=undefined] - An object to use as this when executing the callback.
    * @returns {number} The index of the first element that satisfies the condition, or -1 if not found.
    */
@@ -1410,7 +1410,7 @@ class BaseArray {
   /**
    * Returns the last element that satisfies the provided testing function.
    *
-   * @param {function} callbackFn - A function that tests each element.
+   * @param {ArrayCallback} callbackFn - A function that tests each element.
    * @param {any} [thisArg=undefined] - An object to use as this when executing the callback.
    * @returns {any} The last element that satisfies the condition, or undefined if not found.
    */
@@ -1422,7 +1422,7 @@ class BaseArray {
   /**
    * Returns the last index of an element that satisfies the provided testing function.
    *
-   * @param {function} callbackFn - A function that tests each element.
+   * @param {ArrayCallback} callbackFn - A function that tests each element.
    * @param {any} [thisArg=undefined] - An object to use as this when executing the callback.
    * @returns {number} The last index of an element that satisfies the condition, or -1 if not found.
    */
@@ -1434,7 +1434,7 @@ class BaseArray {
   /**
    * Tests whether all elements in the array pass the provided function.
    *
-   * @param {function} callbackFn - A function that tests each element.
+   * @param {ArrayCallback} callbackFn - A function that tests each element.
    * @param {any} [thisArg=undefined] - An object to use as this when executing the callback.
    * @returns {boolean} True if all elements satisfy the condition, false otherwise.
    */
@@ -1446,7 +1446,7 @@ class BaseArray {
   /**
    * Tests whether at least one element in the array passes the provided function.
    *
-   * @param {function} callbackFn - A function that tests each element.
+   * @param {ArrayCallback} callbackFn - A function that tests each element.
    * @param {any} [thisArg=undefined] - An object to use as this when executing the callback.
    * @returns {boolean} True if at least one element satisfies the condition, false otherwise.
    */
@@ -1458,7 +1458,7 @@ class BaseArray {
   /**
    * Returns a new array containing elements that satisfy the provided testing function.
    *
-   * @param {function} callbackFn - A function that tests each element.
+   * @param {ArrayCallback} callbackFn - A function that tests each element.
    * @param {any} [thisArg=undefined] - An object to use as this when executing the callback.
    * @returns {TypedArray} The new array containing elements that satisfy the condition.
    */
@@ -1470,7 +1470,7 @@ class BaseArray {
   /**
    * Creates a new array with the results of calling a provided function on every element in this array.
    *
-   * @param {function} callbackFn - A function that produces an element of the new array for each element of the current array.
+   * @param {ArrayCallback} callbackFn - A function that produces an element of the new array for each element of the current array.
    * @param {any} [thisArg=undefined] - An object to use as this when executing the callback.
    * @returns {TypedArray} The new array with the results of calling the provided function on each element.
    */
@@ -1482,7 +1482,7 @@ class BaseArray {
   /**
    * Executes a provided function once for each array element.
    *
-   * @param {function} callbackFn - A function to execute for each element.
+   * @param {ArrayCallback} callbackFn - A function to execute for each element.
    * @param {any} [thisArg=undefined] - An object to use as this when executing the callback.
    */
   forEach(callbackFn, thisArg = undefined) {
@@ -1493,7 +1493,7 @@ class BaseArray {
   /**
    * Applies a function against an accumulator and each element in the array (left-to-right).
    *
-   * @param {function} callbackFn - A function to execute on each element.
+   * @param {ArrayCallback} callbackFn - A function to execute on each element.
    * @param {any} [initialValue=0] - The initial value of the accumulator.
    * @returns {any} The accumulated result.
    */
@@ -1506,7 +1506,7 @@ class BaseArray {
   /**
    * Applies a function against an accumulator and each element in the array (right-to-left).
    *
-   * @param {function} callbackFn - A function to execute on each element.
+   * @param {ArrayCallback} callbackFn - A function to execute on each element.
    * @param {any} [initialValue=0] - The initial value of the accumulator.
    * @returns {any} The accumulated result.
    */
@@ -1597,7 +1597,7 @@ module.exports = BaseArray;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-12-12T19:31:50.673Z
+                at 2023-12-12T19:43:44.390Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
