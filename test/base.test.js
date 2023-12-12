@@ -111,6 +111,14 @@ describe("BaseArray", () => {
       expect(baseArray.at(10)).toBe(42);
     });
 
+    test("should handle pushing bigint with push method", () => {
+      const baseArray = TypedArray("int8", 10);
+      baseArray.push(42n);
+
+      expect(baseArray.length).toBe(11);
+      expect(baseArray.at(10)).toBe(42);
+    });
+
     test("should handle push method for long range", () => {
       const baseArray = TypedArray("int8");
 
@@ -122,10 +130,10 @@ describe("BaseArray", () => {
     });
 
     test("should handle push method with wrong type", () => {
-      const baseArray = TypedArray("int8");
-      baseArray.push("Hi");
-
-      expect(baseArray.length).toBe(0);
+      expect(() => {
+        const baseArray = TypedArray("int8");
+        baseArray.push("Hi");
+      }).toThrow("Invalid Type");
     });
 
     test("should handle popping elements with pop method", () => {
@@ -202,11 +210,10 @@ describe("BaseArray", () => {
     });
 
     test("should not unshift non-number values", () => {
-      const baseArray = TypedArray("int8", 10);
-      baseArray.unshift("hello");
-
-      expect(baseArray.length).toBe(10);
-      expect(baseArray.at(0)).toBe(0);
+      expect(() => {
+        const baseArray = TypedArray("int8", 10);
+        baseArray.unshift("Hello");
+      }).toThrow("Invalid Type");
     });
   });
 

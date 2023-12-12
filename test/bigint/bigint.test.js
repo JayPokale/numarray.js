@@ -32,4 +32,15 @@ describe("BigIntArray", () => {
     expect(int64.at(2)).toBe(2n);
     expect(int64.at(3)).toBe(3n);
   });
+
+  test("should handle push elements with different types", () => {
+    const int64 = TypedArray("int64");
+
+    int64.push(3);
+    expect(int64.at(0)).toBe(3n);
+
+    expect(() => {
+      int64.push("Hi");
+    }).toThrow("Invalid Type");
+  });
 });

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1702378334932" clover="3.2.0">
-  <project timestamp="1702378334932" name="All files">
-    <metrics statements="183" coveredstatements="183" conditionals="91" coveredconditionals="91" methods="56" coveredmethods="56" elements="330" coveredelements="330" complexity="0" loc="183" ncloc="183" packages="7" files="13" classes="13"/>
+<coverage generated="1702409510695" clover="3.2.0">
+  <project timestamp="1702409510695" name="All files">
+    <metrics statements="201" coveredstatements="201" conditionals="97" coveredconditionals="97" methods="56" coveredmethods="56" elements="354" coveredelements="354" complexity="0" loc="201" ncloc="201" packages="7" files="13" classes="13"/>
     <package name="array">
       <metrics statements="25" coveredstatements="25" conditionals="24" coveredconditionals="24" methods="1" coveredmethods="1"/>
       <file name="main.js" path="/home/jay/Desktop/trial/array/main.js">
@@ -17,147 +17,165 @@
         <line num="9" count="7" type="stmt"/>
         <line num="10" count="7" type="stmt"/>
         <line num="12" count="7" type="cond" truecount="2" falsecount="0"/>
-        <line num="13" count="96" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="98" type="cond" truecount="2" falsecount="0"/>
         <line num="14" count="1" type="stmt"/>
-        <line num="18" count="95" type="cond" truecount="2" falsecount="0"/>
-        <line num="19" count="41" type="cond" truecount="2" falsecount="0"/>
-        <line num="20" count="38" type="cond" truecount="2" falsecount="0"/>
-        <line num="23" count="28" type="cond" truecount="2" falsecount="0"/>
-        <line num="24" count="25" type="cond" truecount="2" falsecount="0"/>
-        <line num="25" count="22" type="cond" truecount="2" falsecount="0"/>
-        <line num="28" count="19" type="cond" truecount="2" falsecount="0"/>
-        <line num="29" count="14" type="cond" truecount="2" falsecount="0"/>
-        <line num="32" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="97" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="42" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="39" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="29" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="26" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="23" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="20" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="10" type="cond" truecount="2" falsecount="0"/>
         <line num="33" count="5" type="cond" truecount="2" falsecount="0"/>
         <line num="34" count="1" type="stmt"/>
         <line num="37" count="7" type="stmt"/>
       </file>
     </package>
     <package name="array.lib.baseArray">
-      <metrics statements="118" coveredstatements="118" conditionals="67" coveredconditionals="67" methods="35" coveredmethods="35"/>
+      <metrics statements="136" coveredstatements="136" conditionals="73" coveredconditionals="73" methods="35" coveredmethods="35"/>
       <file name="baseArray.js" path="/home/jay/Desktop/trial/array/lib/baseArray/baseArray.js">
-        <metrics statements="97" coveredstatements="97" conditionals="58" coveredconditionals="58" methods="30" coveredmethods="30"/>
-        <line num="189" count="95" type="stmt"/>
-        <line num="190" count="95" type="stmt"/>
-        <line num="191" count="95" type="stmt"/>
-        <line num="192" count="95" type="stmt"/>
-        <line num="193" count="94" type="stmt"/>
-        <line num="196" count="94" type="stmt"/>
-        <line num="197" count="94" type="stmt"/>
-        <line num="201" count="1" type="stmt"/>
-        <line num="206" count="61" type="stmt"/>
-        <line num="210" count="1" type="stmt"/>
-        <line num="214" count="1" type="stmt"/>
-        <line num="218" count="105" type="cond" truecount="2" falsecount="0"/>
-        <line num="219" count="32" type="stmt"/>
-        <line num="220" count="32" type="cond" truecount="2" falsecount="0"/>
-        <line num="221" count="1" type="stmt"/>
-        <line num="224" count="105" type="stmt"/>
-        <line num="229" count="62" type="cond" truecount="2" falsecount="0"/>
-        <line num="230" count="62" type="cond" truecount="4" falsecount="0"/>
-        <line num="231" count="60" type="stmt"/>
-        <line num="235" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="236" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="237" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="238" count="3" type="stmt"/>
-        <line num="242" count="65940" type="cond" truecount="2" falsecount="0"/>
-        <line num="243" count="65939" type="cond" truecount="2" falsecount="0"/>
-        <line num="244" count="65939" type="stmt"/>
-        <line num="245" count="65939" type="stmt"/>
-        <line num="249" count="82" type="cond" truecount="2" falsecount="0"/>
-        <line num="250" count="81" type="stmt"/>
-        <line num="251" count="81" type="cond" truecount="2" falsecount="0"/>
-        <line num="252" count="81" type="stmt"/>
-        <line num="256" count="102" type="cond" truecount="2" falsecount="0"/>
-        <line num="257" count="101" type="cond" truecount="2" falsecount="0"/>
-        <line num="258" count="101" type="stmt"/>
-        <line num="259" count="4960" type="stmt"/>
-        <line num="261" count="101" type="stmt"/>
-        <line num="262" count="101" type="stmt"/>
-        <line num="263" count="101" type="stmt"/>
-        <line num="267" count="82" type="cond" truecount="2" falsecount="0"/>
-        <line num="268" count="81" type="stmt"/>
-        <line num="269" count="81" type="cond" truecount="2" falsecount="0"/>
-        <line num="270" count="81" type="stmt"/>
-        <line num="271" count="4769" type="stmt"/>
-        <line num="273" count="81" type="stmt"/>
-        <line num="274" count="81" type="stmt"/>
-        <line num="278" count="6" type="stmt"/>
-        <line num="280" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="281" count="4" type="stmt"/>
-        <line num="282" count="20" type="cond" truecount="2" falsecount="0"/>
-        <line num="283" count="8" type="cond" truecount="2" falsecount="0"/>
-        <line num="284" count="4" type="stmt"/>
-        <line num="288" count="6" type="stmt"/>
-        <line num="293" count="1" type="stmt"/>
-        <line num="294" count="1" type="stmt"/>
-        <line num="298" count="4" type="stmt"/>
-        <line num="299" count="4" type="stmt"/>
-        <line num="303" count="2" type="stmt"/>
-        <line num="304" count="2" type="stmt"/>
-        <line num="308" count="2" type="stmt"/>
-        <line num="309" count="2" type="stmt"/>
-        <line num="313" count="2" type="stmt"/>
-        <line num="314" count="2" type="stmt"/>
-        <line num="318" count="2" type="stmt"/>
-        <line num="319" count="2" type="stmt"/>
+        <metrics statements="115" coveredstatements="115" conditionals="64" coveredconditionals="64" methods="30" coveredmethods="30"/>
+        <line num="76" count="97" type="stmt"/>
+        <line num="77" count="97" type="stmt"/>
+        <line num="78" count="97" type="stmt"/>
+        <line num="79" count="97" type="stmt"/>
+        <line num="80" count="96" type="stmt"/>
+        <line num="83" count="96" type="stmt"/>
+        <line num="84" count="96" type="stmt"/>
+        <line num="95" count="1" type="stmt"/>
+        <line num="104" count="61" type="stmt"/>
+        <line num="113" count="1" type="stmt"/>
+        <line num="122" count="1" type="stmt"/>
+        <line num="132" count="105" type="stmt"/>
+        <line num="134" count="105" type="cond" truecount="2" falsecount="0"/>
+        <line num="135" count="32" type="stmt"/>
+        <line num="136" count="32" type="cond" truecount="2" falsecount="0"/>
+        <line num="137" count="1" type="stmt"/>
+        <line num="140" count="105" type="stmt"/>
+        <line num="151" count="63" type="cond" truecount="2" falsecount="0"/>
+        <line num="152" count="63" type="cond" truecount="4" falsecount="0"/>
+        <line num="153" count="61" type="stmt"/>
+        <line num="164" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="165" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="166" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="167" count="3" type="stmt"/>
+        <line num="178" count="65943" type="stmt"/>
+        <line num="179" count="65941" type="cond" truecount="2" falsecount="0"/>
+        <line num="180" count="65941" type="stmt"/>
+        <line num="181" count="65941" type="stmt"/>
+        <line num="191" count="82" type="cond" truecount="2" falsecount="0"/>
+        <line num="192" count="81" type="stmt"/>
+        <line num="193" count="81" type="cond" truecount="2" falsecount="0"/>
+        <line num="194" count="81" type="stmt"/>
+        <line num="204" count="102" type="stmt"/>
+        <line num="205" count="101" type="cond" truecount="2" falsecount="0"/>
+        <line num="206" count="101" type="stmt"/>
+        <line num="207" count="4960" type="stmt"/>
+        <line num="209" count="101" type="stmt"/>
+        <line num="210" count="101" type="stmt"/>
+        <line num="211" count="101" type="stmt"/>
+        <line num="221" count="82" type="cond" truecount="2" falsecount="0"/>
+        <line num="222" count="81" type="stmt"/>
+        <line num="223" count="81" type="cond" truecount="2" falsecount="0"/>
+        <line num="224" count="81" type="stmt"/>
+        <line num="225" count="4769" type="stmt"/>
+        <line num="227" count="81" type="stmt"/>
+        <line num="228" count="81" type="stmt"/>
+        <line num="238" count="6" type="stmt"/>
+        <line num="240" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="241" count="4" type="stmt"/>
+        <line num="242" count="20" type="cond" truecount="2" falsecount="0"/>
+        <line num="243" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="244" count="4" type="stmt"/>
+        <line num="248" count="6" type="stmt"/>
+        <line num="258" count="1" type="stmt"/>
+        <line num="259" count="1" type="stmt"/>
+        <line num="271" count="4" type="stmt"/>
+        <line num="272" count="4" type="stmt"/>
+        <line num="273" count="4" type="stmt"/>
+        <line num="284" count="2" type="stmt"/>
+        <line num="285" count="2" type="stmt"/>
+        <line num="286" count="2" type="stmt"/>
+        <line num="297" count="2" type="stmt"/>
+        <line num="298" count="2" type="stmt"/>
+        <line num="299" count="2" type="stmt"/>
+        <line num="310" count="2" type="stmt"/>
+        <line num="311" count="2" type="stmt"/>
+        <line num="312" count="2" type="stmt"/>
         <line num="323" count="2" type="stmt"/>
         <line num="324" count="2" type="stmt"/>
-        <line num="328" count="2" type="stmt"/>
-        <line num="329" count="2" type="stmt"/>
-        <line num="333" count="3" type="stmt"/>
-        <line num="334" count="3" type="stmt"/>
-        <line num="338" count="3" type="stmt"/>
-        <line num="339" count="3" type="stmt"/>
-        <line num="343" count="1" type="stmt"/>
-        <line num="344" count="1" type="stmt"/>
-        <line num="348" count="1" type="stmt"/>
-        <line num="349" count="1" type="stmt"/>
-        <line num="353" count="2" type="stmt"/>
-        <line num="354" count="2" type="stmt"/>
-        <line num="358" count="2" type="stmt"/>
-        <line num="359" count="2" type="stmt"/>
-        <line num="363" count="2" type="stmt"/>
-        <line num="364" count="2" type="stmt"/>
-        <line num="368" count="3" type="stmt"/>
-        <line num="369" count="3" type="stmt"/>
-        <line num="374" count="30" type="stmt"/>
-        <line num="375" count="30" type="stmt"/>
-        <line num="376" count="30" type="stmt"/>
-        <line num="377" count="165111" type="stmt"/>
-        <line num="378" count="30" type="stmt"/>
-        <line num="379" count="30" type="stmt"/>
-        <line num="383" count="4" type="stmt"/>
-        <line num="384" count="4" type="stmt"/>
-        <line num="385" count="4" type="stmt"/>
-        <line num="386" count="150" type="stmt"/>
-        <line num="387" count="4" type="stmt"/>
-        <line num="388" count="4" type="stmt"/>
-        <line num="392" count="7" type="stmt"/>
+        <line num="335" count="2" type="stmt"/>
+        <line num="336" count="2" type="stmt"/>
+        <line num="347" count="2" type="stmt"/>
+        <line num="348" count="2" type="stmt"/>
+        <line num="359" count="3" type="stmt"/>
+        <line num="360" count="3" type="stmt"/>
+        <line num="371" count="3" type="stmt"/>
+        <line num="372" count="3" type="stmt"/>
+        <line num="383" count="1" type="stmt"/>
+        <line num="384" count="1" type="stmt"/>
+        <line num="395" count="1" type="stmt"/>
+        <line num="396" count="1" type="stmt"/>
+        <line num="406" count="2" type="stmt"/>
+        <line num="407" count="2" type="stmt"/>
+        <line num="418" count="2" type="stmt"/>
+        <line num="419" count="2" type="stmt"/>
+        <line num="420" count="2" type="stmt"/>
+        <line num="431" count="2" type="stmt"/>
+        <line num="432" count="2" type="stmt"/>
+        <line num="433" count="2" type="stmt"/>
+        <line num="443" count="3" type="stmt"/>
+        <line num="444" count="3" type="stmt"/>
+        <line num="456" count="31" type="stmt"/>
+        <line num="457" count="31" type="stmt"/>
+        <line num="458" count="31" type="stmt"/>
+        <line num="459" count="165131" type="stmt"/>
+        <line num="460" count="31" type="stmt"/>
+        <line num="461" count="31" type="stmt"/>
+        <line num="471" count="4" type="stmt"/>
+        <line num="472" count="4" type="stmt"/>
+        <line num="473" count="4" type="stmt"/>
+        <line num="474" count="150" type="stmt"/>
+        <line num="475" count="4" type="stmt"/>
+        <line num="476" count="4" type="stmt"/>
+        <line num="489" count="66164" type="cond" truecount="2" falsecount="0"/>
+        <line num="490" count="66154" type="cond" truecount="2" falsecount="0"/>
+        <line num="491" count="66151" type="stmt"/>
+        <line num="493" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="494" count="1" type="stmt"/>
+        <line num="496" count="2" type="stmt"/>
+        <line num="498" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="499" count="8" type="stmt"/>
+        <line num="501" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="502" count="1" type="stmt"/>
+        <line num="504" count="1" type="stmt"/>
+        <line num="509" count="7" type="stmt"/>
       </file>
       <file name="integerArray.js" path="/home/jay/Desktop/trial/array/lib/baseArray/integerArray.js">
         <metrics statements="21" coveredstatements="21" conditionals="9" coveredconditionals="9" methods="5" coveredmethods="5"/>
         <line num="1" count="7" type="stmt"/>
-        <line num="5" count="76" type="stmt"/>
-        <line num="9" count="8" type="stmt"/>
-        <line num="11" count="8" type="cond" truecount="2" falsecount="0"/>
-        <line num="13" count="7" type="stmt"/>
-        <line num="14" count="7" type="stmt"/>
-        <line num="15" count="7" type="stmt"/>
-        <line num="17" count="7" type="cond" truecount="2" falsecount="0"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="23" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="25" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="26" count="2" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
-        <line num="30" count="131616" type="stmt"/>
-        <line num="31" count="6" type="stmt"/>
-        <line num="32" count="6" type="stmt"/>
-        <line num="33" count="65811" type="stmt"/>
-        <line num="34" count="131616" type="stmt"/>
-        <line num="37" count="6" type="stmt"/>
-        <line num="41" count="7" type="stmt"/>
+        <line num="16" count="77" type="stmt"/>
+        <line num="27" count="8" type="stmt"/>
+        <line num="29" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="7" type="stmt"/>
+        <line num="32" count="7" type="stmt"/>
+        <line num="33" count="7" type="stmt"/>
+        <line num="35" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="3" type="stmt"/>
+        <line num="41" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="48" count="131616" type="stmt"/>
+        <line num="49" count="6" type="stmt"/>
+        <line num="50" count="6" type="stmt"/>
+        <line num="51" count="65811" type="stmt"/>
+        <line num="52" count="131616" type="stmt"/>
+        <line num="55" count="6" type="stmt"/>
+        <line num="59" count="7" type="stmt"/>
       </file>
     </package>
     <package name="array.lib.bigint">
@@ -165,9 +183,9 @@
       <file name="byte8.js" path="/home/jay/Desktop/trial/array/lib/bigint/byte8.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="7" type="stmt"/>
-        <line num="5" count="4" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
-        <line num="13" count="7" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="23" count="7" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
       </file>
     </package>
     <package name="array.lib.biguint">
@@ -175,9 +193,9 @@
       <file name="byte8.js" path="/home/jay/Desktop/trial/array/lib/biguint/byte8.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="7" type="stmt"/>
-        <line num="5" count="4" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
-        <line num="13" count="7" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
       </file>
     </package>
     <package name="array.lib.float">
@@ -185,16 +203,16 @@
       <file name="byte4.js" path="/home/jay/Desktop/trial/array/lib/float/byte4.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="7" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
-        <line num="9" count="8" type="stmt"/>
-        <line num="13" count="7" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="23" count="8" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
       </file>
       <file name="byte8.js" path="/home/jay/Desktop/trial/array/lib/float/byte8.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="7" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
-        <line num="9" count="8" type="stmt"/>
-        <line num="13" count="7" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="23" count="8" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
       </file>
     </package>
     <package name="array.lib.int">
@@ -202,23 +220,23 @@
       <file name="byte1.js" path="/home/jay/Desktop/trial/array/lib/int/byte1.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="7" type="stmt"/>
-        <line num="5" count="54" type="stmt"/>
-        <line num="9" count="107" type="stmt"/>
-        <line num="13" count="7" type="stmt"/>
+        <line num="13" count="55" type="stmt"/>
+        <line num="23" count="109" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
       </file>
       <file name="byte2.js" path="/home/jay/Desktop/trial/array/lib/int/byte2.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="7" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="13" count="7" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
       </file>
       <file name="byte4.js" path="/home/jay/Desktop/trial/array/lib/int/byte4.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="7" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="9" count="39" type="stmt"/>
-        <line num="13" count="7" type="stmt"/>
+        <line num="13" count="10" type="stmt"/>
+        <line num="23" count="39" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
       </file>
     </package>
     <package name="array.lib.uint">
@@ -226,23 +244,23 @@
       <file name="byte1.js" path="/home/jay/Desktop/trial/array/lib/uint/byte1.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="7" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="13" count="7" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
       </file>
       <file name="byte2.js" path="/home/jay/Desktop/trial/array/lib/uint/byte2.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="7" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="13" count="7" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
       </file>
       <file name="byte4.js" path="/home/jay/Desktop/trial/array/lib/uint/byte4.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="7" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="13" count="7" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
       </file>
     </package>
   </project>
