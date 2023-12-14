@@ -101,14 +101,14 @@ describe("BaseArray", () => {
       expect(cloneArray).toEqual(baseArray.array());
     });
 
-    test("freeUpSpace() should reduce memory", () => {
+    test("reduceMemory() should reduce memory", () => {
       const baseArray = NumArray("int8", 20);
 
       for (var i = 0; i < 5; ++i) {
         baseArray.pop();
       }
-      expect(baseArray.freeUpSpace()).toBe(undefined);
-      expect(baseArray.freeUpSpace()).toBe(undefined);
+      expect(baseArray.reduceMemory()).toBe(undefined);
+      expect(baseArray.reduceMemory()).toBe(undefined);
     });
   });
 
