@@ -93,12 +93,22 @@ describe("BaseArray", () => {
       expect(normalArray).toEqual([42]);
     });
 
-    test("should clone the array with clone method", () => {
+    test("clone() should clone the array with clone method", () => {
       const baseArray = NumArray("int8", 10);
       baseArray.set(0, 42);
 
       const cloneArray = baseArray.clone();
       expect(cloneArray).toEqual(baseArray.array());
+    });
+
+    test("freeUpSpace() should reduce memory", () => {
+      const baseArray = NumArray("int8", 20);
+
+      for (var i = 0; i < 5; ++i) {
+        baseArray.pop();
+      }
+      expect(baseArray.freeUpSpace()).toBe(undefined);
+      expect(baseArray.freeUpSpace()).toBe(undefined);
     });
   });
 
