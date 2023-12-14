@@ -1,8 +1,8 @@
-const TypedArray = require("../main");
+const NumArray = require("../main");
 
 describe("IntArray", () => {
   test("should sort the array in ascending order (Length < 0x100)", () => {
-    const BaseArray = TypedArray("int32", 0);
+    const BaseArray = NumArray("int32", 0);
     var arr = Array(0x10)
       .fill()
       .map((_, i) => i);
@@ -16,7 +16,7 @@ describe("IntArray", () => {
   });
 
   test("should sort the array in ascending order (Length < 0x100) repeated", () => {
-    const BaseArray = TypedArray("int32", 0x10);
+    const BaseArray = NumArray("int32", 0x10);
     BaseArray.fill(10);
 
     BaseArray.sort();
@@ -26,7 +26,7 @@ describe("IntArray", () => {
   });
 
   test("should sort the array in ascending order (Length < 0x10000)", () => {
-    const BaseArray = TypedArray("int32", 0);
+    const BaseArray = NumArray("int32", 0);
     var arr = Array(0x100)
       .fill()
       .map((_, i) => i);
@@ -40,7 +40,7 @@ describe("IntArray", () => {
   });
 
   test("should sort the array in ascending order (Length < 0x10000) repeated", () => {
-    const BaseArray = TypedArray("int32", 0x100);
+    const BaseArray = NumArray("int32", 0x100);
     BaseArray.fill(10);
 
     BaseArray.sort();
@@ -50,7 +50,7 @@ describe("IntArray", () => {
   });
 
   test("should sort the array in ascending order (Length >= 0x10000)", () => {
-    const BaseArray = TypedArray("int32", 0);
+    const BaseArray = NumArray("int32", 0);
     var arr = Array(0x10000)
       .fill()
       .map((_, i) => i);
@@ -64,7 +64,7 @@ describe("IntArray", () => {
   });
 
   test("should sort the array in ascending order (Length >= 0x10000) repeated", () => {
-    const BaseArray = TypedArray("int32", 0x10000);
+    const BaseArray = NumArray("int32", 0x10000);
     BaseArray.fill(10);
 
     BaseArray.sort();
