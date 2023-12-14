@@ -1,10 +1,10 @@
-const NumArray = require("../main");
+const NumberArray = require("../main");
 
 var n = 10_000_000;
 console.log("n =", n);
 
 var arr = Array();
-var int32 = NumArray(int32);
+var int32 = NumberArray(int32);
 
 var func1 = () => {
   for (var i = 0; i < n; ++i) {

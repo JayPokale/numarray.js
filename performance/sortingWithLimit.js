@@ -1,11 +1,11 @@
-const NumArray = require("../main");
+const NumberArray = require("../main");
 
 var n = 10_000_000;
 var limit = 1000;
 console.log("n =", n);
 
 var arr = Array(n);
-var int32 = NumArray(int32, n);
+var int32 = NumberArray(int32, n);
 
 for (var i = 0; i < n; ++i) {
   var num = Math.floor(Math.random() * limit);

@@ -1,5 +1,5 @@
 {
-  "name": "numarray.js",
+  "name": "typedarray",
   "version": "1.0.0",
   "description": "Dynamic Typed Array",
   "main": "main.js",

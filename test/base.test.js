@@ -1,5 +1,5 @@
 const BaseArray = require("../lib/baseArray/baseArray");
-const NumArray = require("../main");
+const NumberArray = require("../main");
 
 describe("BaseArray", () => {
   describe("Initialization", () => {
@@ -12,30 +12,30 @@ describe("BaseArray", () => {
 
     test("should throw an error when trying to give negative length", () => {
       expect(() => {
-        NumArray("int8", -5);
+        NumberArray("int8", -5);
       }).toThrow("Array length is not valid");
     });
 
     test("should have a default length of 0", () => {
-      const baseArray = NumArray("int8");
+      const baseArray = NumberArray("int8");
       expect(baseArray.length).toBe(0);
     });
 
     test("should have a default type of int32", () => {
-      const baseArray = NumArray();
+      const baseArray = NumberArray();
       expect(baseArray.type).toBe("Int32");
     });
 
     test("should throw an error when initialised with wrong type", () => {
       expect(() => {
-        NumArray("wrongType");
+        NumberArray("wrongType");
       }).toThrow("Enter Valid Type");
     });
   });
 
   describe("Accessing Elements", () => {
     test("at() should return value at given index", () => {
-      const BaseArray = NumArray("int8");
+      const BaseArray = NumberArray("int8");
 
       BaseArray.push(1);
       BaseArray.push(2);
@@ -51,7 +51,7 @@ describe("BaseArray", () => {
     });
 
     test("at() should return undefined", () => {
-      const BaseArray = NumArray("int8");
+      const BaseArray = NumberArray("int8");
 
       BaseArray.push(1);
       BaseArray.push(2);
@@ -62,7 +62,7 @@ describe("BaseArray", () => {
     });
 
     test("set(), at() should set and get values correctly", () => {
-      const baseArray = NumArray("int8", 10);
+      const baseArray = NumberArray("int8", 10);
 
       baseArray.set(0, 42);
       expect(baseArray.at(0)).toBe(42);
@@ -74,7 +74,7 @@ describe("BaseArray", () => {
 
   describe("Array Operations", () => {
     test("array() should create a new array with same buffer with same type", () => {
-      const baseArray = NumArray("int8", 10);
+      const baseArray = NumberArray("int8", 10);
       const array = baseArray.array();
 
       expect(array instanceof baseArray.ArrayType).toBe(true);
@@ -86,7 +86,7 @@ describe("BaseArray", () => {
     });
 
     test("toArray() should convert to a normal array with toArray method", () => {
-      const baseArray = NumArray("int8");
+      const baseArray = NumberArray("int8");
       baseArray.set(0, 42);
 
       const normalArray = baseArray.toArray();
@@ -94,7 +94,7 @@ describe("BaseArray", () => {
     });
 
     test("clone() should clone the array with clone method", () => {
-      const baseArray = NumArray("int8", 10);
+      const baseArray = NumberArray("int8", 10);
       baseArray.set(0, 42);
 
       const cloneArray = baseArray.clone();
@@ -102,7 +102,7 @@ describe("BaseArray", () => {
     });
 
     test("reduceMemory() should reduce memory", () => {
-      const baseArray = NumArray("int8", 20);
+      const baseArray = NumberArray("int8", 20);
 
       for (var i = 0; i < 5; ++i) {
         baseArray.pop();
@@ -114,7 +114,7 @@ describe("BaseArray", () => {
 
   describe("Manipulating Elements", () => {
     test("should handle pushing elements with push method", () => {
-      const baseArray = NumArray("int8", 10);
+      const baseArray = NumberArray("int8", 10);
       baseArray.push(42);
 
       expect(baseArray.length).toBe(11);
@@ -122,7 +122,7 @@ describe("BaseArray", () => {
     });
 
     test("should handle pushing bigint with push method", () => {
-      const baseArray = NumArray("int8", 10);
+      const baseArray = NumberArray("int8", 10);
       baseArray.push(42n);
 
       expect(baseArray.length).toBe(11);
@@ -130,7 +130,7 @@ describe("BaseArray", () => {
     });
 
     test("should handle push method for long range", () => {
-      const baseArray = NumArray("int8");
+      const baseArray = NumberArray("int8");
 
       for (var i = 0; i < 100; ++i) {
         baseArray.push(0);
@@ -141,19 +141,19 @@ describe("BaseArray", () => {
 
     test("should handle push method with wrong type", () => {
       expect(() => {
-        const baseArray = NumArray("int8");
+        const baseArray = NumberArray("int8");
         baseArray.push("Hi");
       }).toThrow("Invalid Type");
     });
 
     test("should handle popping elements with pop method", () => {
-      const baseArray = NumArray("int8", 10);
+      const baseArray = NumberArray("int8", 10);
       baseArray.pop();
       expect(baseArray.length).toBe(9);
     });
 
     test("should handle popping elements and shrink", () => {
-      const baseArray = NumArray("int8", 100);
+      const baseArray = NumberArray("int8", 100);
 
       for (let i = 0; i < 80; ++i) {
         baseArray.pop();
@@ -163,14 +163,14 @@ describe("BaseArray", () => {
     });
 
     test("should throw an error when trying to pop from an empty array", () => {
-      const baseArray = NumArray("int8", 0);
+      const baseArray = NumberArray("int8", 0);
       expect(() => {
         baseArray.pop();
       }).toThrow("Array is empty");
     });
 
     test("should shift elements from the beginning of the array", () => {
-      const baseArray = NumArray("int8", 10);
+      const baseArray = NumberArray("int8", 10);
       baseArray.set(0, 42);
       baseArray.set(1, 23);
       const shiftedValue = baseArray.shift();
@@ -181,7 +181,7 @@ describe("BaseArray", () => {
     });
 
     test("should handle shift elements and shrink", () => {
-      const baseArray = NumArray("int8", 100);
+      const baseArray = NumberArray("int8", 100);
 
       for (let i = 0; i < 80; ++i) {
         baseArray.shift();
@@ -191,14 +191,14 @@ describe("BaseArray", () => {
     });
 
     test("should throw an error when trying to shift from an empty array", () => {
-      const baseArray = NumArray("int8", 0);
+      const baseArray = NumberArray("int8", 0);
       expect(() => {
         baseArray.shift();
       }).toThrow("Array is empty");
     });
 
     test("should unshift elements to the beginning of the array", () => {
-      const baseArray = NumArray("int8", 10);
+      const baseArray = NumberArray("int8", 10);
       baseArray.set(0, 42);
       baseArray.set(1, 23);
       baseArray.unshift(99);
@@ -210,7 +210,7 @@ describe("BaseArray", () => {
     });
 
     test("should unshift elements for long range", () => {
-      const baseArray = NumArray("int8");
+      const baseArray = NumberArray("int8");
 
       for (var i = 0; i < 100; ++i) {
         baseArray.unshift(0);
@@ -221,7 +221,7 @@ describe("BaseArray", () => {
 
     test("should not unshift non-number values", () => {
       expect(() => {
-        const baseArray = NumArray("int8", 10);
+        const baseArray = NumberArray("int8", 10);
         baseArray.unshift("Hello");
       }).toThrow("Invalid Type");
     });
@@ -229,7 +229,7 @@ describe("BaseArray", () => {
 
   describe("Array Operations", () => {
     test("should slice the array based on start and end indices", () => {
-      const baseArray = NumArray("int8", 10);
+      const baseArray = NumberArray("int8", 10);
       baseArray.set(0, 1);
       baseArray.set(1, 2);
       baseArray.set(2, 3);
@@ -242,7 +242,7 @@ describe("BaseArray", () => {
     });
 
     test("should slice the array with extreme values", () => {
-      const baseArray = NumArray("int8");
+      const baseArray = NumberArray("int8");
       baseArray.set(0, 1);
       baseArray.set(1, 2);
       baseArray.set(2, 3);
@@ -256,7 +256,7 @@ describe("BaseArray", () => {
     });
 
     test("should slice the array with default values", () => {
-      const baseArray = NumArray("int8");
+      const baseArray = NumberArray("int8");
       baseArray.set(0, 1);
       baseArray.set(1, 2);
       baseArray.set(2, 3);
@@ -270,7 +270,7 @@ describe("BaseArray", () => {
     });
 
     test("should sort the array in ascending order", () => {
-      const baseArray = NumArray("int8", 3);
+      const baseArray = NumberArray("int8", 3);
       baseArray.set(0, 3);
       baseArray.set(1, 1);
       baseArray.set(2, 2);
@@ -283,7 +283,7 @@ describe("BaseArray", () => {
     });
 
     test("should sort the array in descending order", () => {
-      const baseArray = NumArray("int8", 3);
+      const baseArray = NumberArray("int8", 3);
       baseArray.set(0, 3);
       baseArray.set(1, 1);
       baseArray.set(2, 2);
@@ -296,7 +296,7 @@ describe("BaseArray", () => {
     });
 
     test("should reverse the array", () => {
-      const baseArray = NumArray("int8", 3);
+      const baseArray = NumberArray("int8", 3);
       baseArray.set(0, 1);
       baseArray.set(1, 2);
       baseArray.set(2, 3);
@@ -309,7 +309,7 @@ describe("BaseArray", () => {
     });
 
     test("should fill the array with 1", () => {
-      const baseArray = NumArray("int8", 3).fill(1);
+      const baseArray = NumberArray("int8", 3).fill(1);
       expect(baseArray.at(0)).toBe(1);
       expect(baseArray.at(1)).toBe(1);
       expect(baseArray.at(2)).toBe(1);
@@ -318,7 +318,7 @@ describe("BaseArray", () => {
 
   describe("Search and Comparison", () => {
     test("should return indexes of elements", () => {
-      const baseArray = NumArray("int8", 3);
+      const baseArray = NumberArray("int8", 3);
       baseArray.set(0, 1);
       baseArray.set(1, 2);
       baseArray.set(2, 2);
@@ -330,7 +330,7 @@ describe("BaseArray", () => {
     });
 
     test("should return true if element includes in array", () => {
-      const baseArray = NumArray("int8", 3);
+      const baseArray = NumberArray("int8", 3);
       baseArray.set(0, 1);
       baseArray.set(1, 2);
       baseArray.set(2, 2);
@@ -342,7 +342,7 @@ describe("BaseArray", () => {
 
   describe("Searching and Filtering with Functions", () => {
     test("should find the index of the first element that satisfies the condition", () => {
-      const arr = NumArray("int8", 3);
+      const arr = NumberArray("int8", 3);
       arr.set(0, 1);
       arr.set(1, 2);
       arr.set(2, 3);
@@ -355,7 +355,7 @@ describe("BaseArray", () => {
     });
 
     test("should return -1 if the element is not found", () => {
-      const arr = NumArray("int8", 3);
+      const arr = NumberArray("int8", 3);
       arr.set(0, 1);
       arr.set(1, 3);
       arr.set(2, 5);
@@ -366,7 +366,7 @@ describe("BaseArray", () => {
     });
 
     test("should find the last element that satisfies the condition", () => {
-      const arr = NumArray("int8", 3);
+      const arr = NumberArray("int8", 3);
       arr.set(0, 1);
       arr.set(1, 2);
       arr.set(2, 3);
@@ -378,7 +378,7 @@ describe("BaseArray", () => {
     });
 
     test("should return undefined if the element is not found", () => {
-      const arr = NumArray("int8", 3);
+      const arr = NumberArray("int8", 3);
       arr.set(0, 1);
       arr.set(1, 3);
       arr.set(2, 5);
@@ -389,7 +389,7 @@ describe("BaseArray", () => {
     });
 
     test("should find the last index of the element that satisfies the condition", () => {
-      const arr = NumArray("int8", 3);
+      const arr = NumberArray("int8", 3);
       arr.set(0, 1);
       arr.set(1, 2);
       arr.set(2, 3);
@@ -402,7 +402,7 @@ describe("BaseArray", () => {
     });
 
     test("should return -1 if the element is not found", () => {
-      const arr = NumArray("int8", 3);
+      const arr = NumberArray("int8", 3);
       arr.set(0, 1);
       arr.set(1, 3);
       arr.set(2, 5);
@@ -415,7 +415,7 @@ describe("BaseArray", () => {
 
   describe("Array Predicates", () => {
     test("should return true if all elements satisfy the condition", () => {
-      const arr = NumArray("int8");
+      const arr = NumberArray("int8");
       arr.set(0, 2);
       arr.set(1, 4);
       arr.set(2, 6);
@@ -428,7 +428,7 @@ describe("BaseArray", () => {
     });
 
     test("should return false if at least one element does not satisfy the condition", () => {
-      const arr = NumArray("int8");
+      const arr = NumberArray("int8");
       arr.set(0, 2);
       arr.set(1, 4);
       arr.set(2, 6);
@@ -440,7 +440,7 @@ describe("BaseArray", () => {
     });
 
     test("should return true for an empty array", () => {
-      const arr = NumArray("int8");
+      const arr = NumberArray("int8");
 
       const result = arr.every((value) => value === 0);
 
@@ -448,7 +448,7 @@ describe("BaseArray", () => {
     });
 
     test("should return true if at least one element satisfies the condition", () => {
-      const arr = NumArray("int8");
+      const arr = NumberArray("int8");
       arr.set(0, 1);
       arr.set(1, 3);
       arr.set(2, 5);
@@ -461,7 +461,7 @@ describe("BaseArray", () => {
     });
 
     test("should return false if none of the elements satisfy the condition", () => {
-      const arr = NumArray("int8");
+      const arr = NumberArray("int8");
       arr.set(0, 1);
       arr.set(1, 3);
       arr.set(2, 5);
@@ -473,7 +473,7 @@ describe("BaseArray", () => {
     });
 
     test("should return false for an empty array", () => {
-      const arr = NumArray("int8");
+      const arr = NumberArray("int8");
 
       const result = arr.some((value) => value === 0);
 
@@ -483,7 +483,7 @@ describe("BaseArray", () => {
 
   describe("filter", () => {
     test("should create a new array with filtered elements", () => {
-      const BaseArray = NumArray("int8", 5);
+      const BaseArray = NumberArray("int8", 5);
       BaseArray.set(0, 1);
       BaseArray.set(1, 2);
       BaseArray.set(2, 3);
@@ -500,7 +500,7 @@ describe("BaseArray", () => {
 
   describe("map", () => {
     test("should create a new array with mapped elements", () => {
-      const BaseArray = NumArray("int8", 5);
+      const BaseArray = NumberArray("int8", 5);
       BaseArray.set(0, 1);
       BaseArray.set(1, 2);
       BaseArray.set(2, 3);
@@ -520,7 +520,7 @@ describe("BaseArray", () => {
 
   describe("forEach", () => {
     test("should iterate over each element in the array", () => {
-      const BaseArray = NumArray("int8", 5);
+      const BaseArray = NumberArray("int8", 5);
       BaseArray.set(0, 1);
       BaseArray.set(1, 2);
       BaseArray.set(2, 3);
@@ -537,7 +537,7 @@ describe("BaseArray", () => {
     });
 
     test("should handle forEach on an empty array", () => {
-      const BaseArray = NumArray("int8", 0);
+      const BaseArray = NumberArray("int8", 0);
 
       let sum = 0;
 
@@ -551,7 +551,7 @@ describe("BaseArray", () => {
 
   describe("reduce", () => {
     test("should reduce the array to a single value", () => {
-      const BaseArray = NumArray("int8", 5);
+      const BaseArray = NumberArray("int8", 5);
       BaseArray.set(0, 1);
       BaseArray.set(1, 2);
       BaseArray.set(2, 3);
@@ -564,7 +564,7 @@ describe("BaseArray", () => {
     });
 
     test("should handle reduce on an empty array", () => {
-      const BaseArray = NumArray("int8", 0);
+      const BaseArray = NumberArray("int8", 0);
 
       const result = BaseArray.reduce((acc, value) => acc + value);
 
@@ -574,7 +574,7 @@ describe("BaseArray", () => {
 
   describe("reduceRight", () => {
     test("should reduce the array from right to left to a single value", () => {
-      const BaseArray = NumArray("int8", 5);
+      const BaseArray = NumberArray("int8", 5);
       BaseArray.set(0, 1);
       BaseArray.set(1, 2);
       BaseArray.set(2, 3);
@@ -587,7 +587,7 @@ describe("BaseArray", () => {
     });
 
     test("should handle reduceRight on an empty array", () => {
-      const BaseArray = NumArray("int8", 0);
+      const BaseArray = NumberArray("int8", 0);
 
       const result = BaseArray.reduceRight((acc, value) => acc - value);
 
@@ -597,7 +597,7 @@ describe("BaseArray", () => {
 
   describe("join", () => {
     test("should join array elements into a string with default separator", () => {
-      const BaseArray = NumArray("int8", 3);
+      const BaseArray = NumberArray("int8", 3);
       BaseArray.set(0, 1);
       BaseArray.set(1, 2);
       BaseArray.set(2, 3);
@@ -608,7 +608,7 @@ describe("BaseArray", () => {
     });
 
     test("should join array elements into a string with a custom separator", () => {
-      const BaseArray = NumArray("int8", 3);
+      const BaseArray = NumberArray("int8", 3);
       BaseArray.set(0, 1);
       BaseArray.set(1, 2);
       BaseArray.set(2, 3);
@@ -619,7 +619,7 @@ describe("BaseArray", () => {
     });
 
     test("should handle join on an empty array", () => {
-      const BaseArray = NumArray("int8", 0);
+      const BaseArray = NumberArray("int8", 0);
 
       const result = BaseArray.join();
 

@@ -1,25 +1,25 @@
 const BigInt64 = require("../../lib/bigint/byte8");
-const NumArray = require("../../main");
+const NumberArray = require("../../main");
 
 describe("BigIntArray", () => {
   test("should create an instance of BigInt", () => {
-    const bigint = NumArray("int64", 10);
+    const bigint = NumberArray("int64", 10);
     expect(bigint).toBeInstanceOf(BigInt64);
   });
 
   test("should have the correct type", () => {
-    const bigint = NumArray("int64", 10);
+    const bigint = NumberArray("int64", 10);
     expect(bigint.type).toBe("BigInt");
   });
 
   test("BigInt array should be instance of BigInt64Array", () => {
-    const bigint = NumArray("int64", 10);
+    const bigint = NumberArray("int64", 10);
     const array = bigint.array();
     expect(array instanceof BigInt64Array).toBe(true);
   });
 
   test("should sort BigInt array", () => {
-    const int64 = NumArray("int64");
+    const int64 = NumberArray("int64");
     int64.push(3n);
     int64.push(1n);
     int64.push(2n);
@@ -34,7 +34,7 @@ describe("BigIntArray", () => {
   });
 
   test("should handle push elements with different types", () => {
-    const int64 = NumArray("int64");
+    const int64 = NumberArray("int64");
 
     int64.push(3);
     expect(int64.at(0)).toBe(3n);

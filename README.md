@@ -181,20 +181,51 @@ import NumArray from "numarray.js";
 // Initilise Array
 const arr = NumArray("int32", 10);
 
+// Reverse the array
 arr.reverse();
+
+// Fill 5 at index 3 to 8 (Index 8 not included)
 arr.fill(5, 3, 8);
-arr.indexOf(5, 0);
-arr.lastIndexOf(5, 10);
+
+// Find index of 5 (Start scanning from index 2)
+arr.indexOf(5, 2);
+
+// Find index of 5 (Start scanning backwards from index 8)
+arr.lastIndexOf(5, 8);
+
+// Determines whether the array includes 5
 arr.includes(5, 0);
+
+// Returns the index of the first element that satisfies the provided testing function
 arr.findIndex((x) => x % 2 === 1);
+
+// Returns the last element that satisfies the provided testing function
 arr.findLast((x) => x % 2 === 1);
+
+// Returns the index of the last element that satisfies the provided testing function
 arr.findLastIndex((x) => x % 2 === 1);
+
+// Tests whether all elements in the array pass the provided function
 arr.every((x) => x % 2 === 1);
+
+// Tests whether some elements in the array pass the provided function
 arr.some((x) => x % 2 === 1);
+
+// Returns a new array containing elements that satisfy the provided testing function
 arr.filter((x) => x % 2 === 1);
+
+// Creates a new array with the results of calling a provided function on every element in this array
 arr.map((x) => x + 5);
+
+// Executes a provided function once for each array element
 arr.forEach((x) => 2 * x);
+
+// Executes a provided function once for each array element
 arr.reduce((a, b) => a + b, 0);
+
+// Applies a function against an accumulator and each element in the array (right-to-left)
 arr.reduceRight((a, b) => a + b, 0);
+
+// Joins all elements of the array into a string
 arr.join(",");
 ```
