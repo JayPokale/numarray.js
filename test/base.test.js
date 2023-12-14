@@ -373,9 +373,8 @@ describe("BaseArray", () => {
       arr.set(3, 2);
       arr.set(4, 5);
 
-      const result = arr.findLast((value) => value === 2);
-
-      expect(result).toEqual(2);
+      var res = arr.findLast((value) => value === 2);
+      expect(res).toEqual(2);
     });
 
     test("should return undefined if the element is not found", () => {
@@ -384,9 +383,9 @@ describe("BaseArray", () => {
       arr.set(1, 3);
       arr.set(2, 5);
 
-      const result = arr.findLast((value) => value === 2);
+      var res = arr.findLast((value) => value === 2);
 
-      expect(result).toBeUndefined();
+      expect(res).toBeUndefined();
     });
 
     test("should find the last index of the element that satisfies the condition", () => {
@@ -397,9 +396,9 @@ describe("BaseArray", () => {
       arr.set(3, 2);
       arr.set(4, 5);
 
-      const result = arr.findLastIndex((value) => value === 2);
+      var res = arr.findLastIndex((value) => value === 2);
 
-      expect(result).toEqual(3);
+      expect(res).toEqual(3);
     });
 
     test("should return -1 if the element is not found", () => {
@@ -408,9 +407,9 @@ describe("BaseArray", () => {
       arr.set(1, 3);
       arr.set(2, 5);
 
-      const result = arr.findLastIndex((value) => value === 2);
+      var res = arr.findLastIndex((value) => value === 2);
 
-      expect(result).toEqual(-1);
+      expect(res).toEqual(-1);
     });
   });
 

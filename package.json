@@ -4,7 +4,7 @@
   "description": "Dynamic Typed Array",
   "main": "main.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "author": "Jay Pokale",
   "license": "ISC",
