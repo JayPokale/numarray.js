@@ -1,20 +1,21 @@
-const NumArray = require("../main");
+const NumberArray = require("../main");
 
-var n = 10_000_000;
+var n = 100_000;
 console.log("n =", n);
 
-var arr = Array();
-var int32 = NumArray(int32);
+var arr = Array(n);
+var int32 = NumberArray(int32, n);
 
 var func1 = () => {
   for (var i = 0; i < n; ++i) {
-    int32.push(i);
+    int32.shift();
   }
+  int32.reduceMemory();
 };
 
 var func2 = () => {
   for (var i = 0; i < n; ++i) {
-    arr.push(i);
+    arr.shift();
   }
 };
 
@@ -28,4 +29,4 @@ func2();
 var t4 = new Date();
 console.log("Normal Array: ", t4 - t3);
 
-// Typed array is 1.87 times faster in average
+// Typed array is 1.23 times faster in average

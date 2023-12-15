@@ -19,12 +19,12 @@ const BigUint64 = require("./lib/biguint/byte8");
  *
  * @example
  * // Create a 32-bit integer array with a length of 10
- * const intArray = NumberArray("int32", 10);
+ * const intArray = NumArray("int32", 10);
  *
  * // Create a default 32-bit integer array (type defaults to "int32", length defaults to 0)
- * const defaultArray = NumberArray();
+ * const defaultArray = NumArray();
  */
-var NumberArray = function (type = "int32", length = 0) {
+var NumArray = function (type = "int32", length = 0) {
   if (length < 0) {
     throw new Error("Array length is not valid");
   }
@@ -51,7 +51,7 @@ var NumberArray = function (type = "int32", length = 0) {
 };
 
 /**
- * Module exports the NumberArray function.
- * @module NumberArray
+ * Module exports the NumArray function.
+ * @module NumArray
  */
-module.exports = NumberArray;
+module.exports = NumArray;
