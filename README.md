@@ -5,31 +5,31 @@ Fast and efficient numeric array operations in JavaScript.
 ## Install
 
 ```bash
-npm install numarray.js
+npm install typed-numarray
 # or
-yarn add numarray.js
+yarn add typed-numarray
 # or
-pnpm install numarray.js
+pnpm install typed-numarray
 # or
-bun install numarray.js
+bun install typed-numarray
 ```
 
 ### require
 
 ```js
-const NumArray = require("numarray.js");
+const NumArray = require("typed-numarray");
 ```
 
 ### import
 
 ```js
-import NumArray from "numarray.js";
+import NumArray from "typed-numarray";
 ```
 
 ## Example
 
 ```js
-import NumArray from "numarray.js";
+import NumArray from "typed-numarray";
 
 // Create 32 byte integer array of length 10
 const arr = NumArray("int32", 10);
@@ -88,7 +88,7 @@ const uint64 = NumArray("uint64", 10); // BigUint64Array
 ### Access Array
 
 ```js
-import NumArray from "numarray.js";
+import NumArray from "typed-numarray";
 
 // Initilise Array
 const arr = NumArray("int32", 3);
@@ -109,7 +109,7 @@ arr.slice(1, 3); // Uint32Array [0, 0]
 ### Access Elements
 
 ```js
-import NumArray from "numarray.js";
+import NumArray from "typed-numarray";
 
 // Initilise Array
 const arr = NumArray("int32", 10);
@@ -124,7 +124,7 @@ arr.at(5); // 42
 ### Basic Methods
 
 ```js
-import NumArray from "numarray.js";
+import NumArray from "typed-numarray";
 
 // Initilise Array
 const arr = NumArray("int32", 10);
@@ -147,7 +147,7 @@ arr.shift(); // 8
 In Integer array, normal sorting is 4.6 times faster in average
 
 ```js
-import NumArray from "numarray.js";
+import NumArray from "typed-numarray";
 
 // Initilise Array
 const arr = NumArray("int32", 10);
@@ -164,7 +164,7 @@ arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
 ### Reduce memory of current array
 
 ```js
-import NumArray from "numarray.js";
+import NumArray from "typed-numarray";
 
 // Initilise Array
 const arr = NumArray("int32", 10);
@@ -176,7 +176,7 @@ arr.reduceMemory();
 ### Other Methods (Standard Methods)
 
 ```js
-import NumArray from "numarray.js";
+import NumArray from "typed-numarray";
 
 // Initilise Array
 const arr = NumArray("int32", 10);
