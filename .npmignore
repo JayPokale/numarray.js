@@ -6,3 +6,4 @@ performance
 test
 *.test.js
 .gitignore
+.github
