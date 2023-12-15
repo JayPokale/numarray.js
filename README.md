@@ -35,6 +35,11 @@ import NumArray from "typed-numarray";
 const arr = NumArray("int32", 10);
 ```
 
+## Recommended
+
+- Use `sort()` to get over 5x perrformance whili sorting array in ascending order.
+- Use `reduceMemory()` to clean up some space to optimize memory.
+
 NumArray() accepts two parameters.
 
 1. type {string}
@@ -142,9 +147,7 @@ arr.unshift(8); // 8
 arr.shift(); // 8
 ```
 
-### sort
-
-In Integer array, normal sorting is 4.6 times faster in average
+### Sort
 
 ```js
 import NumArray from "typed-numarray";
@@ -214,7 +217,7 @@ arr.some((x) => x % 2 === 1);
 // Returns a new array containing elements that satisfy the provided testing function
 arr.filter((x) => x % 2 === 1);
 
-// Creates a new array with the results of calling a provided function on every element in this array
+// Returns same array aafter calling the provided function on every element in this array
 arr.map((x) => x + 5);
 
 // Executes a provided function once for each array element

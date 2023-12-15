@@ -27,5 +27,3 @@ var t3 = new Date();
 func2();
 var t4 = new Date();
 console.log("Normal Array: ", t4 - t3);
-
-// Typed array is 1.23 times faster in average
