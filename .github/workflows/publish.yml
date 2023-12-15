@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  setup-and-test:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -24,7 +24,7 @@ jobs:
         run: npm test
 
   publish-npm:
-    needs: setup-and-test
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -34,6 +34,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          registry-url: https://registry.npmjs.org
 
       - name: Publish to NPM
         run: npm publish
