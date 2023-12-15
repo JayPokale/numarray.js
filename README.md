@@ -1,4 +1,4 @@
-# NumArray.js
+# Typed NumArray
 
 Fast and efficient numeric array operations in JavaScript.
 
