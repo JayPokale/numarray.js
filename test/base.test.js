@@ -482,7 +482,7 @@ describe("BaseArray", () => {
   });
 
   describe("filter", () => {
-    test("should create a new array with filtered elements", () => {
+    test("should return same array with filtered elements", () => {
       const BaseArray = NumArray("int8", 5);
       BaseArray.set(0, 1);
       BaseArray.set(1, 2);
@@ -499,7 +499,7 @@ describe("BaseArray", () => {
   });
 
   describe("map", () => {
-    test("should create a new array with mapped elements", () => {
+    test("should return same array with mapped elements", () => {
       const BaseArray = NumArray("int8", 5);
       BaseArray.set(0, 1);
       BaseArray.set(1, 2);

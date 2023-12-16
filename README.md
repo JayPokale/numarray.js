@@ -214,7 +214,7 @@ arr.every((x) => x % 2 === 1);
 // Tests whether some elements in the array pass the provided function
 arr.some((x) => x % 2 === 1);
 
-// Returns a new array containing elements that satisfy the provided testing function
+// Returns same array containing elements that satisfy the provided testing function
 arr.filter((x) => x % 2 === 1);
 
 // Returns same array aafter calling the provided function on every element in this array
