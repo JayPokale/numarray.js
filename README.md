@@ -37,7 +37,7 @@ const arr = NumArray("int32", 10);
 
 ## Recommended
 
-- Use `sort()` to get over 5x perrformance whili sorting array in ascending order.
+- Use `sort()` to get over 5x perrformance while sorting array in ascending order.
 - Use `reduceMemory()` to clean up some space to optimize memory.
 
 NumArray() accepts two parameters.

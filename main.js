@@ -11,15 +11,8 @@ const BigUint64 = require("./lib/biguint/byte8");
 
 /**
  * Creates instances of different numeric array types based on the specified type and length.
- *
  * @param {string} [type="int32"] - The type of the array. Possible values: "int8", "int16", "int32", "int64", "uint8", "uint16", "uint32", "uint64", "float32", "float64".
- * @param {number} [length=0] - The length of the array. Must be a non-negative integer.
- * Returns - An instance of the specified numeric array type.
- * Throws - an error if the array length is not valid or the type is not recognized.
- *
- * @example
- * // Create a 32-bit integer array with a length of 10
- * const intArray = NumArray("int32", 10);
+ * @param {number} [length=0]
  */
 var NumArray = function (type = "int32", length = 0) {
   if (length < 0) {

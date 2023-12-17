@@ -7,3 +7,4 @@ test
 *.test.js
 .gitignore
 .github
+trial.js
